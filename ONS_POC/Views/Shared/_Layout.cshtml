@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Outage Notification System</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style type="text/css">
+        .navbar-default {
+            background-color: #00BCD4;
+            border-color: #064cea;
+            font-size: medium;
+            margin-top: -7px;
+            margin-left: 15px;
+        }
+
+        .container-fluid {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: 0px;
+            margin-left: 0px;
+            align-content: center;
+        }
+
+        .navbar {
+            position: relative;
+            min-height: 50px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            background-color: #00BCD4;
+            border-color: #064cea;
+        }
+
+        .navbar-nav {
+            float: left;
+            margin: 0;
+        }
+
+        .nav {
+            padding-left: 0px;
+            list-style: none;
+        }
+
+        .navbar::after {
+            clear: both;
+        }
+
+        .nav::before, .navbar::after {
+            display: table;
+            content: "";
+        }
+
+        .navbar-default {
+            background-color: #00BCD4;
+            border-color: #064cea;
+            font-size: medium;
+        }
+
+        .navbar {
+            border-radius: 6px;
+        }
+
+        .UseFont {
+            font-size: 12px;
+            margin-left: 400px;
+            margin-top: -20px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+    <div class="container-fluid" id="pMainContainer" style="top:0em; position:relative; min-height:10vh;">
+        <div>
+            <div id="pHeader" style="width:100%; padding-left:15px; background-color:white;">
+                <img style="margin-top: -30px; margin-bottom:10px;" alt="ONS Logo" src="~/Scripts/Images/ONSLogoDesign1.png" />
+                <div style="color:rgb(0,133,63);font-size: xx-large; margin-left:400px; margin-top:-50px;">
+                    Outage Notification System
+                    <div class="UseFont">
+                        (Version 3.6)
+                    </div>
+                </div>
+                @*<img style="margin-top: 14px;" alt="ONS Logo" src="~/Scripts/Images/ONSLogoDesign.png" />
+                    <img style="margin-top: 14px;" alt="ONS Logo" src="~/Scripts/Images/ONSLogoDesign2.png" />
+                    <img style="margin-top: 14px;" alt="ONS Logo" src="~/Scripts/Images/ONSLogoDesign3.png" />*@
+                <br />
+
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <div class="container-fluid">
+            <div id="pHorizantalTabs" style="width:95%">
+                <div>
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <ul class="nav navbar-nav">
+                                @*<li class="dropdown" style="text-decoration:none; background-color:rgb(255, 255, 255);">
+                                    </li>*@
+                                <li class="active"><a href="#pane1" data-toggle="tab">Login</a></li>
+                                <li><a href="#pane2" data-toggle="tab">User</a></li>
+                                <li><a href="#pane3" data-toggle="tab">Order Info</a></li>
+                                <li><a href="#pane4" data-toggle="tab">Premise</a></li>
+                                <li><a href="#pane5" data-toggle="tab">Location</a></li>
+                                <li><a href="#pane6" data-toggle="tab">Circuit</a></li>
+                                <li><a href="#pane6" data-toggle="tab">Reports</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="nav navbar-fixed-top">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#pane1" data-toggle="tab">Login</a></li>
+                        <li><a href="#pane2" data-toggle="tab">User</a></li>
+                        <li><a href="#pane3" data-toggle="tab">Order Info</a></li>
+                        <li><a href="#pane4" data-toggle="tab">Premise</a></li>
+                        <li><a href="#pane5" data-toggle="tab">Location</a></li>
+                        <li><a href="#pane6" data-toggle="tab">Circuit</a></li>
+                        <li><a href="#pane6" data-toggle="tab">Reports</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>*@
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+
+@*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/modernizr")*@
+
+
+</html>
